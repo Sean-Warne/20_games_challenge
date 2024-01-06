@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://dfejfgdp6a1qq"]
+
+[ext_resource type="Texture2D" uid="uid://b0yioot7ffcot" path="res://assets/sprites/divider.png" id="1_qmgog"]
+[ext_resource type="PackedScene" uid="uid://bsx3ufxbdj5k5" path="res://scenes/player1.tscn" id="2_0mgav"]
+[ext_resource type="PackedScene" uid="uid://qva8bb3uij40" path="res://scenes/ball.tscn" id="3_ah8eu"]
+[ext_resource type="PackedScene" uid="uid://cresg44nx5uhl" path="res://scenes/player2.tscn" id="4_t7ufo"]
+
+[node name="World" type="Node2D"]
+
+[node name="Divider" type="Sprite2D" parent="."]
+position = Vector2(409, 268)
+scale = Vector2(1, 1.5)
+texture = ExtResource("1_qmgog")
+
+[node name="Player1" parent="." instance=ExtResource("2_0mgav")]
+position = Vector2(100, 315)
+
+[node name="Ball" parent="." instance=ExtResource("3_ah8eu")]
+position = Vector2(362, 177)
+
+[node name="Player2" parent="." instance=ExtResource("4_t7ufo")]
+position = Vector2(758, 216)
